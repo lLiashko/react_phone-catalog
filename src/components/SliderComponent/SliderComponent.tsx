@@ -1,7 +1,7 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './SliderComponent.module.scss';
+import styles from './SliderComponent.module.scss';
 
 const SliderComponent = () => {
   const settings = {
@@ -16,29 +16,31 @@ const SliderComponent = () => {
   const slides = [
     {
       id: 1,
-      imageUrl: '/img/banner-accessories.png',
+      imageUrl: '/img/slider/banner-accessories.png',
       alt: 'Example of accessories',
     },
     {
       id: 2,
-      imageUrl: '/img/banner-phones.png',
+      imageUrl: '/img/slider/banner-phones.png',
       alt: 'Example of phones',
     },
     {
       id: 3,
-      imageUrl: '/img/banner-tablets.png',
-      alt: 'Example of tablets',
+      imageUrl: '/img/slider/category-accessories.png',
+      alt: 'Example of cases',
     },
   ];
 
   return (
-    <Slider {...settings}>
-      {slides.map(slide => (
-        <div key={slide.id}>
-          <img src={slide.imageUrl} alt={slide.alt} />
-        </div>
-      ))}
-    </Slider>
+    <div className={styles.sliderContainer}>
+      <Slider {...settings}>
+        {slides.map(slide => (
+          <div key={slide.id} className={styles.slickSlide}>
+            <img src={slide.imageUrl} alt={slide.alt} />
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
