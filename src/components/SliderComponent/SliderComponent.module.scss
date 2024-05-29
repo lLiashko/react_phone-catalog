@@ -21,22 +21,5 @@
   border-radius: 10px;
   display: flex;
   justify-content: center;
-}
-
-.slick-prev,
-.slick-next {
-  color: red;
-  z-index: 1;
-  &:before {
-    color: #f1f2f9;
-  }
-}
-
-.slick-dots li button:before {
-  color: white;
-  font-size: 12px;
-}
-
-.slick-dots li.slick-active button:before {
-  color: red;
+  padding-top: 50px;
 }

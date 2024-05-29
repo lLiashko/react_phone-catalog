@@ -8,13 +8,15 @@ import ShopByCategory from './components/ShopByCategory';
 import SliderComponent from './components/SliderComponent';
 
 export const App = () => (
-  <div className="container">
+  <>
     <Header />
-    <h1>Welcome to Nice Gadgets Store!</h1>
-    <SliderComponent />
-    <BrandNewModels />
-    <ShopByCategory />
-    <HotPrices />
+    <div className="container">
+      <h1>Welcome to Nice Gadgets Store!👌</h1>
+      <SliderComponent />
+      <BrandNewModels />
+      <ShopByCategory />
+      <HotPrices />
+    </div>
     <Footer />
-  </div>
+  </>
 );
