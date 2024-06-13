@@ -1,0 +1,35 @@
+@import '../../../fonts';
+
+.img {
+  max-width: 368px;
+  max-height: 368px;
+  display: block;
+  margin: 0 auto 10px;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.title {
+  font-family: 'Mont-SewmiBold', sans-serif;
+  line-height: 26px;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 4px;
+}
+
+title p {
+  font-size: 20px;
+}
+
+.quantity {
+  margin: 0;
+  margin-top: -12px;
+  color: #75767f;
+  font-family: 'Mont-Regular', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+}

@@ -2,6 +2,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './SliderComponent.module.scss';
+import './slick.scss';
 
 const SliderComponent = () => {
   const settings = {
@@ -16,17 +17,17 @@ const SliderComponent = () => {
   const slides = [
     {
       id: 1,
-      imageUrl: '/img/slider/banner-accessories.png',
+      imageUrl: './img/slider/banner-accessories.png',
       alt: 'Example of accessories',
     },
     {
       id: 2,
-      imageUrl: '/img/slider/banner-phones.png',
+      imageUrl: './img/slider/banner-phones.png',
       alt: 'Example of phones',
     },
     {
       id: 3,
-      imageUrl: '/img/slider/category-accessories.png',
+      imageUrl: './img/slider/category-accessories.png',
       alt: 'Example of cases',
     },
   ];

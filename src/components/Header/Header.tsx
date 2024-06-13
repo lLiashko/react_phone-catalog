@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 
 export default function Header() {
@@ -5,34 +6,34 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <a href="#home">
-            <img src="/icons/logo.png" alt="logo" />
-          </a>
+          <Link to="/">
+            <img src="./icons/logo.png" alt="logo" />
+          </Link>
         </div>
 
         <nav className={styles.nav}>
-          <a href="#home" className={styles.item}>
+          <Link to="/" className={styles.item}>
             Home
-          </a>
-          <a href="#phone" className={styles.item}>
+          </Link>
+          <Link to="/phones" className={styles.item}>
             Phones
-          </a>
-          <a href="#tablets" className={styles.item}>
+          </Link>
+          <Link to="/tablets" className={styles.item}>
             Tablets
-          </a>
-          <a href="#accessories" className={styles.item}>
+          </Link>
+          <Link to="/accessories" className={styles.item}>
             Accessories
-          </a>
+          </Link>
         </nav>
       </div>
 
       <div className={styles.navButtons}>
-        <button className={styles.button}>
-          <img src="/icons/liked-items.png" alt="liked items" />
-        </button>
-        <button className={styles.button}>
-          <img src="/icons/shopping-cart.png" alt="shopping cart" />
-        </button>
+        <Link to="/likeditems" className={styles.button}>
+          <img src="./icons/liked-items.png" alt="liked items" />
+        </Link>
+        <Link to="/shoppingcart" className={styles.button}>
+          <img src="./icons/shopping-cart.png" alt="shopping cart" />
+        </Link>
       </div>
     </header>
   );

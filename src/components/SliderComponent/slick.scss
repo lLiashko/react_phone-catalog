@@ -1,0 +1,42 @@
+.sliderContainer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 30px;
+}
+
+.slickSlide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.slickSlide img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  &:before {
+    font-size: 24px; // adjust the size as needed
+  }
+}
+
+.slick-dots li button:before {
+  color: #75767f;
+  font-size: 8px;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.5;
+  color: #905bff;
+}

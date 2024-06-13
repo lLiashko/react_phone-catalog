@@ -1,0 +1,129 @@
+@import '../../../fonts';
+
+.product-card {
+  background-color: #161827;
+  padding: 22px;
+  width: 232px;
+  height: 466px;
+  margin: 8px;
+  text-align: center;
+}
+
+.product-image {
+  background-color: #161827;
+  width: 100%;
+  border-radius: 10px;
+  max-width: 170px;
+  max-height: 196px;
+  margin-inline: auto;
+  margin-bottom: 24px;
+}
+
+.title {
+  background-color: #161827;
+  font-family: 'Mont-Regular', sans-serif;
+  font-size: 19px;
+  line-height: 21px;
+  margin: 10px 0;
+}
+
+.price {
+  display: flex;
+  background-color: #161827;
+  font-family: 'Mont-Bold', sans-serif;
+  font-size: 22px;
+  line-height: 30.8px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #3b3e4a;
+  padding-bottom: 8px;
+
+  .regular-price {
+    background-color: #161827;
+    text-decoration: line-through;
+    color: #75767f;
+    font-size: 18px;
+  }
+
+  .discount-price {
+    background-color: #161827;
+    margin-right: 8px;
+  }
+}
+
+.specs {
+  background-color: #161827;
+  text-align: left;
+  margin: 10px 0;
+  font-family: 'Mont SemiBold', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.specs p {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  color: #75767f;
+  background-color: #161827;
+  margin-bottom: 8px;
+}
+
+.specs tr {
+  background-color: #161827;
+}
+
+span {
+  background-color: #161827;
+}
+
+.button-container {
+  background-color: #161827;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.add-to-cart {
+  background-color: #905bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 185px;
+  height: 40px;
+
+  &:hover {
+    background-color: #a378ff;
+  }
+}
+
+.like-button {
+  width: 40px;
+  height: 40px;
+  background-color: #323542;
+  border: none;
+  padding: 11px;
+
+  &:hover {
+    background-color: #4a4d58;
+
+    img {
+      background-color: #4a4d58;
+    }
+  }
+}
+
+.like-button img {
+  width: 18px;
+  height: 18px;
+  background-color: #323542;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+}
