@@ -49,13 +49,13 @@ export default function BrandNewModels() {
   const handleAddToCart = (event: MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     event.preventDefault();
-    // Add your add to cart logic here
+    // add to cart logic
   };
 
   const handleLike = (event: MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     event.preventDefault();
-    // Add your like logic here
+    // like logic
   };
 
   const settings = {
