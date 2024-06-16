@@ -9,17 +9,23 @@ export default function ShopByCategory() {
 
   useEffect(() => {
     async function fetchData() {
-      const phonesResponse = await fetch('./api/phones.json');
+      const phonesResponse = await fetch(
+        'https://lliashko.github.io/react_phone-catalog/api/phones.json',
+      );
       const phonesData = await phonesResponse.json();
 
       setPhoneCount(phonesData.length);
 
-      const tabletsResponse = await fetch('./api/tablets.json');
+      const tabletsResponse = await fetch(
+        'https://lliashko.github.io/react_phone-catalog/api/tablets.json',
+      );
       const tabletsData = await tabletsResponse.json();
 
       setTabletCount(tabletsData.length);
 
-      const accessoriesResponse = await fetch('./api/accessories.json');
+      const accessoriesResponse = await fetch(
+        'https://lliashko.github.io/react_phone-catalog/api/accessories.json',
+      );
       const accessoriesData = await accessoriesResponse.json();
 
       setAccessoryCount(accessoriesData.length);

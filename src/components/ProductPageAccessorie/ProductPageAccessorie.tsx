@@ -17,7 +17,7 @@ export default function ProductPageAccessorie() {
   const [accessorie, setAccessorie] = useState<Accessorie | null>(null);
 
   useEffect(() => {
-    fetch(`./api/accessories.json`)
+    fetch(`https://lliashko.github.io/react_phone-catalog/api/accessories.json`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

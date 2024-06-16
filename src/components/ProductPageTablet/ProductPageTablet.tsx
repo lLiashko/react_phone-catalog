@@ -17,7 +17,7 @@ export default function ProductPageTablet() {
   const [tablet, setTablet] = useState<Tablet | null>(null);
 
   useEffect(() => {
-    fetch('./api/tablets.json')
+    fetch('https://lliashko.github.io/react_phone-catalog/api/tablets.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
