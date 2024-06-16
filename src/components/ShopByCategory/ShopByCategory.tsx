@@ -35,19 +35,19 @@ export default function ShopByCategory() {
         <Category
           title="Mobile phones"
           quantity={phoneCount}
-          image="/img/shop-by-categories/category-phones.png"
+          image="img/shop-by-categories/category-phones.png"
           link="/phones"
         />
         <Category
           title="Tablets"
           quantity={tabletCount}
-          image="/img/shop-by-categories/category-tablets.png"
+          image="img/shop-by-categories/category-tablets.png"
           link="/tablets"
         />
         <Category
           title="Accessories"
           quantity={accessoryCount}
-          image="/img/shop-by-categories/category-accessories.png"
+          image="img/shop-by-categories/category-accessories.png"
           link="/accessories"
         />
       </div>

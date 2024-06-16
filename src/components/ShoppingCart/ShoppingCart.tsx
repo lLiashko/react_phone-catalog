@@ -7,7 +7,7 @@ const ShoppingCart = () => (
       Your cart is empty. Please add some products to the shopping cart to see
       it here.
     </p>
-    <img src="/img/cart-is-empty.png" alt="cart is empty" />
+    <img src="img/cart-is-empty.png" alt="cart is empty" />
   </div>
 );
 

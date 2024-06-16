@@ -9,7 +9,7 @@ const LikedItems = () => (
     </p>
     <img
       className={styles.img}
-      src="/img/product-not-found.png"
+      src="img/product-not-found.png"
       alt="liked list is empty"
     />
   </div>

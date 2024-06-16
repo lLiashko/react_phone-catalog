@@ -173,10 +173,12 @@ export default function Phones() {
           '& .MuiPagination-ul': {
             justifyContent: 'center',
             padding: '20px 0',
-            zIndex: -1,
           },
           '& .MuiPaginationItem-root': {
             color: '#905BFF',
+          },
+          '& .MuiTouchRipple-root': {
+            zIndex: -1,
           },
         }}
       >
