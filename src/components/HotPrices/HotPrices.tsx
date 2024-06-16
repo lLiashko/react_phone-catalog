@@ -52,7 +52,7 @@ export default function HotPrices() {
   const handleAddToCart = (event: MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     event.preventDefault();
-    //add to cart logic
+    //add to cart logic here
   };
 
   const handleLike = (event: MouseEvent<HTMLButtonElement>) => {

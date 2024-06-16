@@ -19,7 +19,7 @@ export default function Accessories() {
   const [fetchError, setFetchError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/api/accessories.json')
+    fetch('https://lliashko.github.io/react_phone-catalog/api/accessories.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

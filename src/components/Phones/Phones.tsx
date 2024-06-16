@@ -1,6 +1,6 @@
 import { useEffect, useState, MouseEvent } from 'react';
 import Card from '../BrandNewModels/Card/Card';
-import styles from '../Accessories/Accessories.module.scss';
+import styles from './Phones.module.scss';
 import { Link } from 'react-router-dom';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
@@ -20,12 +20,12 @@ export default function Phones() {
   const [phones, setPhones] = useState<Phone[]>([]);
   const [fetchError, setFetchError] = useState<string | null>(null);
   const [sortOption, setSortOption] = useState<string>('newest');
-  const [itemsPerPage, setItemsPerPage] = useState<number>(4);
+  const [itemsPerPage, setItemsPerPage] = useState<number>(16);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [searchTerm] = useState<string>('');
 
   useEffect(() => {
-    fetch('/api/phones.json')
+    fetch('https://lliashko.github.io/react_phone-catalog/api/phones.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -64,11 +64,6 @@ export default function Phones() {
     setCurrentPage(1);
   };
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
-    setCurrentPage(1);
-  };
-
   const handlePageChange = (_: React.ChangeEvent<unknown>, value: number) => {
     setCurrentPage(value);
   };
@@ -103,33 +98,53 @@ export default function Phones() {
   return (
     <div>
       <h1>Mobile Phones</h1>
+      <p className={styles.quantity}>{phones.length} models</p>
       <div>
-        <label>
-          Sort by:
-          <select value={sortOption} onChange={handleSortChange}>
-            <option value="newest">Newest</option>
-            <option value="alphabetically">Alphabetically</option>
-            <option value="cheapest">Cheapest</option>
-          </select>
-        </label>
-        <label>
-          Items on page:
-          <select value={itemsPerPage} onChange={handleItemsPerPageChange}>
-            <option value={4}>4</option>
-            <option value={8}>8</option>
-            <option value={16}>16</option>
-            <option value={phones.length}>All</option>
-          </select>
-        </label>
-        <label>
-          Search:
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={handleSearchChange}
-            placeholder="Type phone name..."
-          />
-        </label>
+        <div className={styles.sort}>
+          <label className={styles.labelName}>
+            Sort by
+            <div>
+              <select
+                value={sortOption}
+                onChange={handleSortChange}
+                className={styles.select}
+              >
+                <option className={styles.option} value="alphabetically">
+                  Alphabetically
+                </option>
+                <option className={styles.option} value="newest">
+                  Price (high to low)
+                </option>
+                <option className={styles.option} value="cheapest">
+                  Price (low to high)
+                </option>
+              </select>
+            </div>
+          </label>
+          <label className={styles.labelName}>
+            Items on page{' '}
+            <div>
+              <select
+                value={itemsPerPage}
+                onChange={handleItemsPerPageChange}
+                className={styles.select}
+              >
+                <option className={styles.option} value={4}>
+                  4
+                </option>
+                <option className={styles.option} value={8}>
+                  8
+                </option>
+                <option className={styles.option} value={16}>
+                  16
+                </option>
+                <option className={styles.option} value={phones.length}>
+                  All
+                </option>
+              </select>
+            </div>
+          </label>
+        </div>
       </div>
       <div className={styles.grid}>
         {paginatedPhones.map(phone => (
@@ -158,6 +173,7 @@ export default function Phones() {
           '& .MuiPagination-ul': {
             justifyContent: 'center',
             padding: '20px 0',
+            zIndex: -1,
           },
           '& .MuiPaginationItem-root': {
             color: '#905BFF',
@@ -168,7 +184,6 @@ export default function Phones() {
           count={totalPages}
           page={currentPage}
           onChange={handlePageChange}
-          color="secondary"
         />
       </Stack>
     </div>
